@@ -165,4 +165,4 @@ COPY root/ /
 
 # ports and volumes
 EXPOSE 443
-VOLUME /config /downloads
+VOLUME /config /downloads /downloads/autodl
