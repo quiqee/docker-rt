@@ -89,14 +89,15 @@ ldconfig /usr/bin && ldconfig /usr/lib && \
 cd /tmp && curl -O https://raw.githubusercontent.com/LesleyLai/cppunit/master/cppunit.m4 && \
 
 # install webui
- mkdir -p \
+mkdir -p \
         /usr/share/webapps/rutorrent \
         /defaults/rutorrent-conf && \
- git clone https://github.com/Novik/ruTorrent.git \
+git clone https://github.com/Novik/ruTorrent.git \
         /usr/share/webapps/rutorrent/ && \
- mv /usr/share/webapps/rutorrent/conf/* \
+mv /usr/share/webapps/rutorrent/conf/* \
         /defaults/rutorrent-conf/ && \
- rm -rf \
+perl -pi -e "s/\$defaultTheme \= \"\"\;/\$defaultTheme \= \"Oblivion\"\;/g" /usr/share/webapps/rutorrent/plugins/theme/conf.php && \
+rm -rf \
         /defaults/rutorrent-conf/users && \
 
 # install autodl-irssi perl modules
