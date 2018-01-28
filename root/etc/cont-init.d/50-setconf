@@ -7,6 +7,7 @@ mkdir -p /config/tmp /detach_sess
 [[ ! -L /home/abc/.autodl ]] && ln -s /config/.autodl /home/abc/.autodl
 [[ ! -L /config/.irssi/scripts/autorun/autodl-irssi.pl ]] && ln -s /config/.irssi/scripts/autodl-irssi.pl /config/.irssi/scripts/autorun/autodl-irssi.pl
 [[ ! -f /config/.autodl/autodl.cfg ]] && cp /defaults/autodl.cfg /config/.autodl/autodl.cfg
+[[ ! -f /config/rutorrent/.htpasswd ]] && cp /defaults/rutorrent-conf/.htpasswd /config/rutorrent/.htpasswd
 [[ ! -f /usr/share/webapps/rutorrent/plugins/autodl-irssi/conf.php ]] && cp /defaults/conf.php /usr/share/webapps/rutorrent/plugins/autodl-irssi/conf.php
 
 # set perms

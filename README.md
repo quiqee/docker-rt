@@ -7,3 +7,9 @@ docker create --name=rutorrent \
 -p 443:443 \
 -p 45566-45576:45566-45576 \
 rutorrent
+
+rutorrent page is protected with username/password: admin/admin
+
+To change this credential (from host machine):
+sudo apt-get install apache2-utils
+htpasswd -c <path to data>/rutorrent/.htpasswd USERNAME
